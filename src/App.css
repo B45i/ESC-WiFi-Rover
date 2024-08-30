@@ -1,0 +1,12 @@
+button {
+  @apply bg-[#27D0B2]  rounded-full grid place-content-center text-[#0c4f6c] transition-all;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #106c94, #0e5b7c);
+  box-shadow: 16px 16px 26px #0d5574, -16px -16px 26px #1175a0;
+}
+
+button:active {
+  border-radius: 72px;
+  background: #0f658a;
+  box-shadow: inset 14px 14px 28px #0c4f6c, inset -14px -14px 28px #127ba8;
+}
