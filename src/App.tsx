@@ -11,7 +11,7 @@ function App() {
   };
 
   return (
-    <div class="h-screen w-screen grid _place-content-center">
+    <div class="h-screen w-screen grid _place-content-center select-none">
       <main class="bg-[#279AD0] h-full w-full relative flex items-center py-4 px-8 justify-between portrait:hidden landscape:flex">
         <div class="text-[#279AD0]  text-xs absolute rounded-full left-1/2 transform -translate-x-1/2 w-64 border  px-2 py-1 max-w-fit  top-4">
           <img src={solidLogo} alt="solid logo" class="h-6" />
