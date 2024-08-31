@@ -3,6 +3,7 @@ import solidLogo from "/esc-logo.svg";
 import "./App.css";
 import { Arrow } from "./componets/Arrow";
 import { joystickAction, joystickActions } from "./api/actions";
+import { HoldableButton } from "./componets/HoldableButton";
 
 function App() {
   const handleClick = async (action: joystickActions) => {
@@ -17,46 +18,45 @@ function App() {
         </div>
 
         <div class=" grid grid-cols-3 grid-rows-3  h-[250px] w-[250px]">
-          <button
-            type="button"
-            onClick={() => handleClick(joystickActions.up)}
-            class="col-start-2"
+          <HoldableButton
+            onHold={() => handleClick(joystickActions.up)}
+            className="col-start-2"
           >
             <Arrow direction="up" />
-          </button>
-          <button
-            onClick={() => handleClick(joystickActions.right)}
-            class="col-start-3 row-start-2"
+          </HoldableButton>
+          <HoldableButton
+            onHold={() => handleClick(joystickActions.right)}
+            className="col-start-3 row-start-2"
           >
             <Arrow direction="right" />
-          </button>
-          <button
-            onClick={() => handleClick(joystickActions.down)}
-            class="col-start-2 row-start-3"
+          </HoldableButton>
+          <HoldableButton
+            onHold={() => handleClick(joystickActions.down)}
+            className="col-start-2 row-start-3"
           >
             <Arrow direction="down" />
-          </button>
-          <button
-            onClick={() => handleClick(joystickActions.left)}
-            class="col-start-1 row-start-2"
+          </HoldableButton>
+          <HoldableButton
+            onHold={() => handleClick(joystickActions.left)}
+            className="col-start-1 row-start-2"
           >
             <Arrow direction="left" />
-          </button>
+          </HoldableButton>
         </div>
 
         <div class=" text-2xl font-bold grid grid-cols-2 grid-rows-2 h-[250px] w-[250px]">
-          <button
-            onClick={() => handleClick(joystickActions.x)}
-            class="col-start-2 row-start-1"
+          <HoldableButton
+            onHold={() => handleClick(joystickActions.x)}
+            className="col-start-2 row-start-1"
           >
             X
-          </button>
-          <button
-            onClick={() => handleClick(joystickActions.y)}
-            class="col-start-1 row-start-2"
+          </HoldableButton>
+          <HoldableButton
+            onHold={() => handleClick(joystickActions.y)}
+            className="col-start-1 row-start-2"
           >
             Y
-          </button>
+          </HoldableButton>
         </div>
       </main>
 
