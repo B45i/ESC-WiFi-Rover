@@ -10,6 +10,10 @@ function App() {
     joystickAction(action);
   };
 
+  const sendStop = async () => {
+    joystickAction(joystickActions.stop);
+  };
+
   return (
     <div class="h-screen w-screen grid _place-content-center select-none">
       <main class="bg-[#279AD0] h-full w-full relative flex items-center py-4 px-8 justify-between portrait:hidden landscape:flex">
@@ -19,24 +23,28 @@ function App() {
 
         <div class=" grid grid-cols-3 grid-rows-3  h-[250px] w-[250px]">
           <HoldableButton
+            onRelease={sendStop}
             onHold={() => handleClick(joystickActions.up)}
             className="col-start-2"
           >
             <Arrow direction="up" />
           </HoldableButton>
           <HoldableButton
+            onRelease={sendStop}
             onHold={() => handleClick(joystickActions.right)}
             className="col-start-3 row-start-2"
           >
             <Arrow direction="right" />
           </HoldableButton>
           <HoldableButton
+            onRelease={sendStop}
             onHold={() => handleClick(joystickActions.down)}
             className="col-start-2 row-start-3"
           >
             <Arrow direction="down" />
           </HoldableButton>
           <HoldableButton
+            onRelease={sendStop}
             onHold={() => handleClick(joystickActions.left)}
             className="col-start-1 row-start-2"
           >
@@ -46,12 +54,14 @@ function App() {
 
         <div class=" text-2xl font-bold grid grid-cols-2 grid-rows-2 h-[250px] w-[250px]">
           <HoldableButton
+            onRelease={sendStop}
             onHold={() => handleClick(joystickActions.x)}
             className="col-start-2 row-start-1"
           >
             X
           </HoldableButton>
           <HoldableButton
+            onRelease={sendStop}
             onHold={() => handleClick(joystickActions.y)}
             className="col-start-1 row-start-2"
           >

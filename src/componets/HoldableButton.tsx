@@ -4,9 +4,11 @@ export const HoldableButton = ({
   children,
   className,
   onHold,
+  onRelease,
 }: {
   children: JSX.Element;
   onHold: () => void;
+  onRelease?: () => void;
   className?: string;
 }) => {
   const [isHolding, setIsHolding] = createSignal(false);
@@ -24,6 +26,7 @@ export const HoldableButton = ({
   const stopHolding = () => {
     if (isHolding()) {
       setIsHolding(false);
+      onRelease && onRelease();
       clearInterval(timer);
     }
   };

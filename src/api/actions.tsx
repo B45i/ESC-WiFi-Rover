@@ -5,6 +5,7 @@ export enum joystickActions {
   right = "right",
   x = "x",
   y = "y",
+  stop = "stop",
 }
 
 export const joystickAction = (action: joystickActions) => {
